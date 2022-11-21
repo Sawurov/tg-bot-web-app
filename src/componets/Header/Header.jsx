@@ -8,6 +8,7 @@ const Header = (props) => {
         tg.close()
     }
 
+    
     return(
         <div className={'header'}>
             <Button onClick={onClose}>Close</Button>
