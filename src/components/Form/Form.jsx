@@ -71,8 +71,8 @@ const Form = () => {
                 onChange={onChangeStreet}
             />
             <select value={subject} onChange={onChangeSubject } className={'select'}>
-                <option >Yuridik Shaxs</option>
-                <option >Jismoniy Shaxs</option>
+                <option value={subject} >Yuridik Shaxs</option>
+                <option value={subject}>Jismoniy Shaxs</option>
             </select>
             <YMaps>
                 <div className={'map'}>
