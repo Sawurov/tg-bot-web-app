@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './Form.css';
 import { YMaps, Map, GeolocationControl, ListBox, ListBoxItem } from '@pbe/react-yandex-maps';
 import { useTelegram } from '../../hooks/useTelegram';
@@ -8,6 +8,23 @@ const Form = () => {
     const [street, setStreet] = useState('');
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
+
+    const onSendData = useCallback(() => {
+        const data = {
+            city,
+            street,
+            subject
+
+        }
+        tg.sendData(JSON.stringify(data));
+    }, [city, street, subject])
+
+    useEffect(() => {
+        tg.onEvent('MainButtonClicked', callback)
+        return () => {
+            tg.offEvent('MainButtonClicked', callback)
+        }
+    }, [onSendData])
 
     useEffect(() => {
         tg.MainButton.setParams({
