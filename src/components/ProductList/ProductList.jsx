@@ -31,7 +31,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('https://glitch.com/edit/#!/woozy-difficult-colby:8000/web-data', {
+        fetch('http://127.0.0.1:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
