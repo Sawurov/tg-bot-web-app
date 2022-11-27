@@ -5,14 +5,14 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 500000, description: 'Kok Rangli, tor'},
-    {id: '2', title: 'Куртка', price: 1200000, description: 'Yashil Rangli, issiq'},
-    {id: '3', title: 'Джинсы 2', price: 500000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '1', title: 'Jinsi', price: 500000, description: 'Kok Rangli, uzun'},
+    {id: '2', title: 'Kurtka', price: 1200000, description: 'Yashil Rangli, issiq'},
+    {id: '3', title: 'Jinsi 2', price: 500000, description: 'Qora Rangli, uzun',
+    {id: '4', title: 'Kurtka 8', price: 122, description: 'Yashil Rangli, issiq'},
+    {id: '5', title: 'Jinsi 3', price: 5000, description: 'Kok Rangli, tor'},
+    {id: '6', title: 'Kurtka 7', price: 600, description: 'Yashil Rangli, issiq'},
+    {id: '7', title: 'Jinsi 4', price: 5500, description: 'Kok Rangli, tor'},
+    {id: '8', title: 'Kurtka 5', price: 12000, description: 'Oq Rangli, issiq'},
 ]
 
 const getTotalPrice = (items = []) => {
