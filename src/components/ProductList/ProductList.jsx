@@ -7,7 +7,7 @@ import {useCallback, useEffect} from "react";
 const products = [
     {id: '1', title: 'Jinsi', price: 500000, description: 'Kok Rangli, uzun'},
     {id: '2', title: 'Kurtka', price: 1200000, description: 'Yashil Rangli, issiq'},
-    {id: '3', title: 'Jinsi 2', price: 500000, description: 'Qora Rangli, uzun',
+    {id: '3', title: 'Jinsi 2', price: 500000, description: 'Qora Rangli, uzun',},
     {id: '4', title: 'Kurtka 8', price: 122, description: 'Yashil Rangli, issiq'},
     {id: '5', title: 'Jinsi 3', price: 5000, description: 'Kok Rangli, tor'},
     {id: '6', title: 'Kurtka 7', price: 600, description: 'Yashil Rangli, issiq'},
@@ -31,7 +31,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('https://3.75.129.153:3000/web-data', {
+        fetch('http://213.230.100.219:3000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
